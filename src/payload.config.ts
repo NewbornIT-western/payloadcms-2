@@ -5,6 +5,8 @@ import path from 'path'
 import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
+import Pages from './collections/page'
+import { formBuilderPlugin } from '@payloadcms/plugin-form-builder'
 
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
@@ -19,7 +21,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media],
+  collections: [Users, Media, Pages],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {
@@ -30,6 +32,10 @@ export default buildConfig({
   }),
   sharp,
   plugins: [
-    // storage-adapter-placeholder
+    formBuilderPlugin({
+      fields: {
+        payment: false,
+      },
+    }),
   ],
 })

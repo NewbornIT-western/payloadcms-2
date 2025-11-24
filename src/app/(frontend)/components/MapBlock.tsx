@@ -20,20 +20,15 @@ export default function MapBlock({ block }: { block: MapProps }) {
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
       style: 'mapbox://styles/mapbox/streets-v12',
-      center: [block.longitude || 106.660172, block.latitude || 10.762622],
+      center: [block.longitude || 105.774305, block.latitude || 10.036728],
       zoom: block.zoom || 12,
     })
-
-    // Add navigation controls (zoom +/-, compass, rotate)
     map.current.addControl(new mapboxgl.NavigationControl(), 'top-right')
 
-    // Add fullscreen control
     map.current.addControl(new mapboxgl.FullscreenControl(), 'top-right')
 
-    // Add scale control
     map.current.addControl(new mapboxgl.ScaleControl(), 'bottom-left')
 
-    // Add geolocate control (find my location)
     map.current.addControl(
       new mapboxgl.GeolocateControl({
         positionOptions: { enableHighAccuracy: true },
@@ -45,7 +40,7 @@ export default function MapBlock({ block }: { block: MapProps }) {
 
     // Add marker with popup
     const marker = new mapboxgl.Marker({ color: 'red' })
-      .setLngLat([block.longitude || 106.660172, block.latitude || 10.762622])
+      .setLngLat([block.longitude || 105.774305, block.latitude || 10.036728])
       .addTo(map.current)
 
     if (block.heading) {

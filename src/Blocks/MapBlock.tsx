@@ -13,14 +13,14 @@ const MapBlock: Block = {
       type: 'number',
       label: 'Latitude',
       required: true,
-      defaultValue: 10.762622,
+      defaultValue: 10.036728,
     },
     {
       name: 'longitude',
       type: 'number',
       label: 'Longitude',
       required: true,
-      defaultValue: 106.660172,
+      defaultValue: 105.774305,
     },
     {
       name: 'zoom',

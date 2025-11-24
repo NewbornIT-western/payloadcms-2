@@ -4,6 +4,7 @@ import React from 'react'
 import HeroBlock from './components/HeroBlock'
 import ContentBlock from './components/ContentBlock'
 import FormBlock from './components/FormBlock'
+import MapBlock from './components/MapBlock'
 
 import config from '@/payload.config'
 import './styles.css'
@@ -38,6 +39,8 @@ export default async function HomePage() {
           return <ContentBlock key={index} block={block} />
         case 'form':
           return <FormBlock key={block.id} block={block} />
+        case 'map':
+          return <MapBlock key={index} block={block} />
         default:
           return null
       }

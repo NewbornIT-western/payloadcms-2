@@ -2,6 +2,7 @@ import { CollectionConfig } from 'payload'
 import HeroBlock from '../Blocks/HeroBlock'
 import ContentBlock from '../Blocks/ContentBlock'
 import FormBlock from '../Blocks/FormBlock'
+import MapBlock from '../Blocks/MapBlock'
 
 const Pages: CollectionConfig = {
   slug: 'pages',
@@ -23,7 +24,7 @@ const Pages: CollectionConfig = {
     {
       name: 'layout',
       type: 'blocks',
-      blocks: [HeroBlock, ContentBlock, FormBlock],
+      blocks: [HeroBlock, ContentBlock, FormBlock, MapBlock],
     },
   ],
 }

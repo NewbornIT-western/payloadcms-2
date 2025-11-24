@@ -243,6 +243,16 @@ export interface Page {
             blockName?: string | null;
             blockType: 'form';
           }
+        | {
+            heading?: string | null;
+            latitude: number;
+            longitude: number;
+            zoom?: number | null;
+            height?: number | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'map';
+          }
       )[]
     | null;
   updatedAt: string;
@@ -604,6 +614,17 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               heading?: T;
               form?: T;
+              id?: T;
+              blockName?: T;
+            };
+        map?:
+          | T
+          | {
+              heading?: T;
+              latitude?: T;
+              longitude?: T;
+              zoom?: T;
+              height?: T;
               id?: T;
               blockName?: T;
             };

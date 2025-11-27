@@ -23,6 +23,7 @@
 <td width="50%">
 
 ### 🎯 Core Features
+
 - ⚡ **Payload CMS 3.0** - Headless CMS with MongoDB
 - 🚀 **Next.js 15** - React framework with App Router
 - 💎 **TypeScript** - Type-safe development
@@ -33,6 +34,7 @@
 <td width="50%">
 
 ### 🗺️ Mapbox Features
+
 - 🎨 **Multiple Styles** - 7 presets + custom URLs
 - 🏢 **3D Buildings** - Height-based gradient colors
 - ⛰️ **3D Terrain** - Realistic elevation display
@@ -142,6 +144,7 @@ plcms/
 <td width="33%">
 
 #### 📍 Basic Settings
+
 - **Heading** - Map title
 - **Lat/Lng** - Center coordinates
 - **Zoom** - Level (1-20)
@@ -151,6 +154,7 @@ plcms/
 <td width="33%">
 
 #### 🎨 Style Settings
+
 - **Map Style** - 7 presets:
   - 🌙 Dark
   - ☀️ Light
@@ -164,6 +168,7 @@ plcms/
 <td width="33%">
 
 #### ⚙️ Advanced Features
+
 - ☑️ **3D Buildings**
   - Height-based colors
   - Click for info
@@ -208,6 +213,7 @@ Open browser console (F12) and click on the map:
 Select from 7 built-in styles in the admin panel.
 
 **Option 2: Custom Style**
+
 1. Create a style in [Mapbox Studio](https://studio.mapbox.com/)
 2. Copy the style URL: `mapbox://styles/username/style-id`
 3. Paste into **Custom Map Style URL** field
@@ -235,7 +241,7 @@ Edit `src/app/(frontend)/components/MapBlock.tsx`:
 ```typescript
 map.current.setTerrain({
   source: 'mapbox-dem',
-  exaggeration: 3  // 📈 Adjust 1-5 for more/less dramatic effect
+  exaggeration: 3, // 📈 Adjust 1-5 for more/less dramatic effect
 })
 ```
 
@@ -257,14 +263,14 @@ MONGODB_URI=mongodb://127.0.0.1:27017/payloadcms
 
 ## 📝 Available Scripts
 
-| Command | Description |
-|---------|-------------|
-| `pnpm dev` | 🚀 Start development server |
-| `pnpm build` | 📦 Build for production |
-| `pnpm start` | ▶️ Start production server |
-| `pnpm lint` | 🔍 Run ESLint |
-| `pnpm generate:types` | 📝 Generate TypeScript types |
-| `pnpm test` | 🧪 Run tests (integration + e2e) |
+| Command               | Description                      |
+| --------------------- | -------------------------------- |
+| `pnpm dev`            | 🚀 Start development server      |
+| `pnpm build`          | 📦 Build for production          |
+| `pnpm start`          | ▶️ Start production server       |
+| `pnpm lint`           | 🔍 Run ESLint                    |
+| `pnpm generate:types` | 📝 Generate TypeScript types     |
+| `pnpm test`           | 🧪 Run tests (integration + e2e) |
 
 ---
 
@@ -300,12 +306,12 @@ NODE_ENV=production
 
 ## 📚 Documentation & Resources
 
-| Resource | Link |
-|----------|------|
-| 📖 Payload CMS Docs | [payloadcms.com/docs](https://payloadcms.com/docs) |
+| Resource             | Link                                                                  |
+| -------------------- | --------------------------------------------------------------------- |
+| 📖 Payload CMS Docs  | [payloadcms.com/docs](https://payloadcms.com/docs)                    |
 | 🗺️ Mapbox GL JS Docs | [docs.mapbox.com/mapbox-gl-js](https://docs.mapbox.com/mapbox-gl-js/) |
-| ⚡ Next.js Docs | [nextjs.org/docs](https://nextjs.org/docs) |
-| 🎨 Tailwind CSS Docs | [tailwindcss.com/docs](https://tailwindcss.com/docs) |
+| ⚡ Next.js Docs      | [nextjs.org/docs](https://nextjs.org/docs)                            |
+| 🎨 Tailwind CSS Docs | [tailwindcss.com/docs](https://tailwindcss.com/docs)                  |
 
 ---
 

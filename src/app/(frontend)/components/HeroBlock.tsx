@@ -1,5 +1,6 @@
 import { Page } from '@/payload-types'
 import { RichText } from '@payloadcms/richtext-lexical/react'
+import { Button } from '@/components/ui/button'
 
 type HeroProps = Extract<NonNullable<Page['layout']>[number], { blockType: 'hero' }>
 
@@ -32,19 +33,11 @@ export default function HeroBlock({ block }: { block: HeroProps }) {
         />
       )}
 
-      <a
-        href={block.ctabuttonText?.url || '#'}
-        style={{
-          display: 'inline-block',
-          padding: '10px 24px',
-          backgroundColor: '#007bff',
-          color: 'white',
-          textDecoration: 'none',
-          borderRadius: '5px',
-        }}
-      >
-        {block.ctabuttonText?.text || 'Click Here'}
-      </a>
+      <Button asChild size="lg">
+        <a href={block.ctabuttonText?.url || '#'}>
+          {block.ctabuttonText?.text || 'Click Here'}
+        </a>
+      </Button>
     </div>
   )
 }

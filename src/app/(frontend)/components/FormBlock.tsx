@@ -2,6 +2,7 @@
 import { Page } from '@/payload-types'
 import { RichText } from 'node_modules/@payloadcms/richtext-lexical/dist/features/converters/lexicalToJSX/Component'
 import { useState } from 'react'
+import { Button } from "@/components/ui/button"
 
 type Formsprops = Extract<NonNullable<Page['layout']>[number], { blockType: 'form' }>
 
@@ -113,19 +114,10 @@ export default function FormBlock({ block }: { block: Formsprops }) {
                 <RichText data={block.form.confirmationMessage!} />
               </div>
             ) : (
-              <button
-                type="submit"
-                style={{
-                  padding: '10px 24px',
-                  backgroundColor: '#007bff',
-                  color: 'white',
-                  border: 'none',
-                  borderRadius: '5px',
-                  cursor: 'pointer',
-                }}
+              <Button variant="outline" bg-blue-500
               >
                 {block.form.submitButtonLabel || 'Submit'}
-              </button>
+              </Button>
             )}
           </form>
         </div>

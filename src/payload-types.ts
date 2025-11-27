@@ -249,6 +249,26 @@ export interface Page {
             longitude: number;
             zoom?: number | null;
             height?: number | null;
+            mapStyle:
+              | 'mapbox://styles/mapbox/dark-v11'
+              | 'mapbox://styles/mapbox/light-v11'
+              | 'mapbox://styles/mapbox/streets-v12'
+              | 'mapbox://styles/mapbox/outdoors-v12'
+              | 'mapbox://styles/mapbox/satellite-streets-v12'
+              | 'mapbox://styles/mapbox/navigation-day-v1'
+              | 'mapbox://styles/mapbox/navigation-night-v1';
+            /**
+             * Enter a custom Mapbox style URL (e.g., mapbox://styles/username/style-id). This will override the style selected above.
+             */
+            customMapStyle?: string | null;
+            /**
+             * Show 3D buildings on the map (requires zoom level 15+)
+             */
+            enable3DBuildings?: boolean | null;
+            /**
+             * Show 3D terrain elevation on the map
+             */
+            enableTerrain?: boolean | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'map';
@@ -625,6 +645,10 @@ export interface PagesSelect<T extends boolean = true> {
               longitude?: T;
               zoom?: T;
               height?: T;
+              mapStyle?: T;
+              customMapStyle?: T;
+              enable3DBuildings?: T;
+              enableTerrain?: T;
               id?: T;
               blockName?: T;
             };
